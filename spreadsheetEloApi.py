@@ -27,9 +27,9 @@ def main():
 		flexSR = "Unranked"
 		
 
-		getId = requests.get("https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/"+i+"?api_key=RGAPI-de5105bf-2740-4b2f-bbb8-5667fb30b0fb")
+		getId = requests.get("https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/"+i+"?api_key=")
 		accountId = str(getId.json()["id"])
-		r = requests.get("https://euw1.api.riotgames.com/lol/league/v3/positions/by-summoner/"+accountId+"?api_key=RGAPI-de5105bf-2740-4b2f-bbb8-5667fb30b0fb")
+		r = requests.get("https://euw1.api.riotgames.com/lol/league/v3/positions/by-summoner/"+accountId+"?api_key=")
 		leagues = r.json()
 
 			
